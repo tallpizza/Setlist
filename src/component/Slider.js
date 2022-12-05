@@ -5,6 +5,7 @@ import {Pagination, Navigation} from "swiper"
 //https://www.npmjs.com/package/react-canvas-draw
 //https://swiperjs.com/swiper-api#parameters
 
+import { DrawingCanvas } from "./popupDrawing";
 import CanvasDraw from "./utils/index";
 import {
   exportComponentAsJPEG,
@@ -72,25 +73,6 @@ const Slider =() =>{
   )
 }
 
-const DrawingCanvas = ({width, height, display}) => {
-  return (
-    <>
-      <div className="touchallow" style={{width:{width}, height:{height},display:{display}?'block':'none'}}>
-      </div>
-      <button onClick={() => this.setColorWhite()}>White</button>
-      <button onClick={() => this.setColorBlack()}>black</button>
-      <button onClick={()=>this.seterase()}>erase</button>
-      <CanvasDraw
-        erase={false}
-        brushRadius={true ? 10 : 1}
-        brushColor={"#fff"}
-        canvasWidth={width}
-        canvasHeight={height}
-        disabled={false}
-        imgSrc="http://182.222.233.17:10380/Public/sample.jpg"
-      />
-    </>
-  )
-}
+
 
 export default Slider
