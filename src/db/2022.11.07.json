@@ -1,0 +1,7 @@
+{
+    "session": [
+        {"id":1, "inst": "Guitar","name":"김상연"},
+        {"id":2, "inst": "Piano","name":"유다은"},
+        {"id":3, "inst": "Drum","name":"홍길동"}
+    ]
+}

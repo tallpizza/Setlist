@@ -1,0 +1,11 @@
+main {
+    background-color: #fff;
+    color: #000;
+}
+
+.touch {
+    background-color: #000;
+    color : white;
+    width: 100px;
+    height: 100px;
+}
