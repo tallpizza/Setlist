@@ -1,6 +1,6 @@
-import dummy from '../db/2022.11.07.json'
+import React from 'react'
 import './SetList.css'
-import  Slider from './Slider'
+import Slider from './Slider'
 
 
 const Today = () => {
@@ -19,14 +19,26 @@ const Today = () => {
 }
 
 const SessionList = () => {
+
+    const [users, setUsers] = React.useState({"session": []});
+    React.useEffect(() => {
+        fetch('./db/2022.11.07.json')
+            .then(res => res.json())
+            .then(data => {
+                setUsers(data)
+            })
+    });
+
+
     return (
         <div className='namelist'>
             <button className='dropdown_btn'>Session List
             </button>
             <div className='dropdown-content'>
-                {dummy.session.map((value) => (
-                    <p key={value.id}>{value.inst} : {value.name}</p>
-                ))}
+                {
+                    users.session.map((value) => (
+                        <p key={value.id}>{value.inst} : {value.name}</p>
+                    )) }
             </div>
         </div>
     )
@@ -66,7 +78,7 @@ const Main_screen = () => {
         </div>
         <input className='order'></input>
         <div className='Slide'>
-          <Slider/>
+            <Slider />
         </div>
         <div className='bottom'>
             Intro:...
