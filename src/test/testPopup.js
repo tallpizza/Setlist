@@ -28,12 +28,13 @@ const Popup = (props) => {
             <CanvasDraw
                 ref={canvasDraw => (saveableCanvas = canvasDraw)}
                 erase={false}
+                loadTimeOffset={1.2}
                 brushRadius={true ? 10 : 1}
                 brushColor={"#000"}
                 canvasWidth={"100vw"}
                 canvasHeight={"100vh"}
                 disabled={false}
-                imgSrc="http://182.222.233.17:10380/Public/sample.jpg"
+                imgSrc={"./img/1.jpg"}
             />
         </div>
 

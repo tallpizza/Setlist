@@ -1,6 +1,6 @@
 import "./test.css"
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Popup } from "./popup"
+import { Popup } from "./testPopup"
 import React, { useState } from 'react'
 
 const Testscreen = () => {

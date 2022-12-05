@@ -169,7 +169,7 @@ export default class extends PureComponent {
     // Load the image
     this.image = new Image();
     this.image.src = this.props.imgSrc;
-
+    
     // Draw the image once loaded
     this.image.onload = () =>
       drawImage({ ctx: this.ctx.grid, img: this.image });
