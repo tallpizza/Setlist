@@ -1,5 +1,4 @@
 import React, { useState, useCallback, useEffect } from "react";
-
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Pagination, Navigation } from "swiper"
 //https://www.npmjs.com/package/react-canvas-draw
