@@ -8,19 +8,17 @@ const ShowScore = (props) => {
     let CanvasReference = React.useRef(null);
 
     let savedDrawingData = "";
-    let localImg = require(`../db/img/${props.img}`);
+    let localImg = `./db/img/${props.img}`
 
 
     return (
         <>
             <CanvasDraw
                 ref={canvasDraw => (CanvasReference = canvasDraw)}
-                erase={false}
-                brushRadius={true ? 10 : 1}
-                brushColor={"#fff"}
+                hideInterface={true}
                 canvasWidth={width}
                 canvasHeight={height}
-                disabled={false}
+                disabled={true}
                 imgSrc={localImg}
             />
         </>

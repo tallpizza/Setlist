@@ -8,10 +8,10 @@ const DrawingCanvas = (props) => {
   const height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
 
   let CanvasReference = React.useRef(null);
-  // CanvasReference.drawImage("../db/img/1.jpg");
 
   let savedDrawingData = "";
-  let localImg = require(`../db/img/${props.img}`);
+  // let localImg = require(`../db/img/${props.img}`).default;
+  let localImg = `./db/img/${props.img}`
 
 
   return (props.trigger) ? (
